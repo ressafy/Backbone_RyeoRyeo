@@ -1,1 +1,1 @@
-<img src="/img/1959.PNG"  width="700" height="370">
+<img src="https://github.com/ressafy/Backbone_RyeoRyeo/tree/main/%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/img/1959.PNG"  width="700" height="370">
