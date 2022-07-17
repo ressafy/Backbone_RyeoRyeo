@@ -1,10 +1,10 @@
 1959 두 개의 숫자열 - 성공 <br>
-![image](./img/1959.PNG)
+![image](./img/1959.PNG)<br>
 1917 어디에 단어가 들어갈 수 있을까 - 성공<br>
-![image](./img/1917.PNG)
+![image](./img/1917.PNG)<br>
 2001 파리퇴치 - 실패 (보고 이해 완)<br>
-![image](./img/2001.PNG)
+![image](./img/2001.PNG)<br>
 1961 숫자 배열 회전 - 실패 (보고 이해 완)<br>
-![image](./img/1961.PNG)
+![image](./img/1961.PNG)<br>
 1974 스도쿠 검증 - 실패 (보고 이해 완)<br>
-![image](./img/1974.PNG)
+![image](./img/1974.PNG)<br>
