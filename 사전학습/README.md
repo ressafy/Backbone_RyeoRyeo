@@ -1,1 +1,1 @@
-![img]("https://github.com/ressafy/Backbone_RyeoRyeo/tree/main/%EC%82%AC%EC%A0%84%ED%95%99%EC%8A%B5/img/1959.PNG" )
+![image](./img/BOJ.PNG)
