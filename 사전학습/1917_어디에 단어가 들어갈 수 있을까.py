@@ -38,13 +38,9 @@ for test_case in range(1, T + 1):
                 check = 0
 
             if  j == a:
-
                 check_list.append(count)
                 count = 0
                 
-        
-
-
         if nm_list[1] in check_list:
             for i in check_list:
                 if i == nm_list[1]:
@@ -63,7 +59,6 @@ for test_case in range(1, T + 1):
                 flag = False
                 check_list.append(check)
                 check = 0
-
             if  j == a:
                 check_list.append(count)
                 count = 0
