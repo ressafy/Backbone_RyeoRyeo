@@ -6,13 +6,11 @@ I'll do review on this repository
 
 I'm in ssafy 8th! I'll do my best for this my last chance
 
-### Prerequisites
+## Java basic
 
-What things you need to install the software and how to install them
+We started Java basic check my [notion](https://ryeo.notion.site/Java-basic-71796d51b81446acabffe92385eae957)!<br>
+![image](./img/Java_basic.PNG)<br>
 
-```
-Give examples
-```
 
 ### Installing
 
