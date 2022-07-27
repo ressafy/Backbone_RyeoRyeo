@@ -3,6 +3,7 @@ package com.ssafy.jes.ui;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,6 +13,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class MyFrame extends JFrame {
 	TextField tf;
@@ -24,6 +26,9 @@ public class MyFrame extends JFrame {
 	MenuItem openItem,saveItem;
 	FileDialog openDialog,saveDialog;
 	Socket s;
+	DataInputStream in;
+	DataOutputStream out;
+	String chatId;
 	public MyFrame() {
 		createComponent();
 		addComponent();
@@ -35,8 +40,9 @@ public class MyFrame extends JFrame {
 		
 		tf.addActionListener(e ->{
 			try {
-				DataOutputStream out = new DataOutputStream(s.getOutputStream());
-				out.writeUTF(tf.getText());
+				// 채팅 보내기
+				out.writeUTF(chatId+tf.getText());
+				tf.setText("");
 				// 입력한 것을 적는 것
 			} catch (IOException e1) {
 				System.out.println("메세지 전송 오류");
@@ -74,10 +80,17 @@ public class MyFrame extends JFrame {
 		});
 		
 		b.addActionListener(e ->{
-			//채팅 서버에 연결
+			//채팅 서버에 연결 한 번만 되게...
 			try {
+				chatId = JOptionPane.showInputDialog("채팅 아이디를 입력하세요");
+				chatId = "[" + chatId +"] ";
 				s = new Socket("localhost",8888);
+				in = new DataInputStream(s.getInputStream());
+				out = new DataOutputStream(s.getOutputStream());
+				ClientThread t= new ClientThread();
+				t.start();
 				ta.append("채팅 서버에 접속되었습니다.\n");
+				b.setEnabled(false);
 			} catch (UnknownHostException e1) {
 				ta.append("UnknownHostException\n");
 				e1.printStackTrace();
@@ -128,5 +141,17 @@ public class MyFrame extends JFrame {
 	
 	
 
-	
+	class ClientThread extends Thread{
+		@Override
+		public void run() {
+			//채팅 메세지를 읽기
+			while(true) {
+				try {
+					ta.append(in.readUTF()+"\n");
+				} catch (IOException e) {
+					System.out.println("오류 발생 - 건너뜀 계속 읽기 가능");
+				}
+			}
+		}
+	}
 }
