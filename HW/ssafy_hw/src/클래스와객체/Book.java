@@ -19,8 +19,7 @@ public class Book{
 		
 		@Override
 		public String toString() {
-			return "Book [isbn=" + isbn + ", title=" + title + ", author=" + author + ", publisher=" + publisher
-					+ ", desc=" + desc + ", price=" + price + "]";
+			return isbn+"\t| "+title+"\t| "+author+" | "+publisher+"\t\t| "+price+" | "+desc;
 		}
 		public String getIsbn() {
 			return isbn;
