@@ -1,6 +1,6 @@
 package 상속과다형성.김모씨;
 
-public class dishWasher implements electric{
+public class dishWasher implements electric,Device{
 	private boolean dooropened = false;
 	private int dishSpace = 10;
 	
@@ -62,6 +62,20 @@ public class dishWasher implements electric{
 		}else {
 			System.out.println("이미 닫혀있습니다.");
 		}
+		
+	}
+
+
+	@Override
+	public void on() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void off() {
+		// TODO Auto-generated method stub
 		
 	}
 }
