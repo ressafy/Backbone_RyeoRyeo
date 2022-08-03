@@ -39,5 +39,5 @@ public class MovieManager {
 		}
 		return result_list;
 	
-}
 	}
+}
