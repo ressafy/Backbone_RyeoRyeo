@@ -38,9 +38,18 @@ public class dishWasher implements electric,Device{
 	}
 	
 	public void outDish() {
-		if(this.dishSpace != 10) {
-			setDishSpace(-1);
+		if(dooropened == false) {
+			System.out.println("문을 열어주세요");
+		}else {
+			if(this.dishSpace != 10) {
+				setDishSpace(-1);
+				System.out.println("접시를 꺼냅니다. 꺼낸 뒤 공간 수: "+getDishSpace());
+				
+			}else {
+				System.out.println("안에 접시가 없습니다.");
+			}
 		}
+		
 	}
 
 	@Override
