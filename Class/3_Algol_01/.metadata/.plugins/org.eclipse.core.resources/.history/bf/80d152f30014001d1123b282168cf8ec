@@ -1,0 +1,10 @@
+package 안려환;
+
+public class P013_SWEA1225_암호생성기 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
