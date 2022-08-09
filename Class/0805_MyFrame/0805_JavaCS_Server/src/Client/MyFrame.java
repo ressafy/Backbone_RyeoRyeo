@@ -3,11 +3,15 @@ package Client;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
 import dto.Member;
 import dto.Myprotocol;
 import util.Request;
@@ -24,6 +28,10 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.awt.event.ActionEvent;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import javax.swing.JLabel;
 
 public class MyFrame extends JFrame {
 
@@ -43,6 +51,8 @@ public class MyFrame extends JFrame {
 	ObjectOutputStream oos;
 	ObjectInputStream ois;
 	String chatId;
+	
+	private JLabel imgLabel1,imgLabel2,imgLabel3;
 
 	/**
 	 * Launch the application.
@@ -66,7 +76,7 @@ public class MyFrame extends JFrame {
 	 */
 	public MyFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 600, 800);
+		setBounds(100, 100, 1000, 800);
 
 		setJMenuBar(menuBar);
 
@@ -82,16 +92,36 @@ public class MyFrame extends JFrame {
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 
-		textArea.setBounds(351, 10, 223, 395);
+		textArea.setBounds(681, 10, 293, 554);
 		contentPane.add(textArea);
 
-		textField.setBounds(351, 434, 223, 68);
+		textField.setBounds(681, 570, 293, 97);
 		contentPane.add(textField);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(12, 20, 649, 352);
+		contentPane.add(panel);
+		
+		imgLabel1 = new JLabel(new ImageIcon("c:\\temp\\book\\e_book01_thum.png"));
+		imgLabel2 = new JLabel(new ImageIcon("c:\\temp\\book\\e_book02_thum.png"));
+		imgLabel3 = new JLabel(new ImageIcon("c:\\temp\\book\\e_book03_thum.png"));
+		
+		panel.add(imgLabel1);
+		panel.add(imgLabel2);
+		panel.add(imgLabel3);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		panel.add(scrollPane);
+		
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(12, 385, 649, 282);
+		contentPane.add(panel_1);
 
-		chatFrame.setLayout(new FlowLayout());
-		chatFrame.add(chatIdField);
-		chatFrame.add(ageField);
-		chatFrame.add(chatBtn);
+		chatFrame.getContentPane().setLayout(new FlowLayout());
+		chatFrame.getContentPane().add(chatIdField);
+		chatFrame.getContentPane().add(ageField);
+		chatFrame.getContentPane().add(chatBtn);
 		chatFrame.pack();
 		setEvent();
 	}
@@ -146,5 +176,4 @@ public class MyFrame extends JFrame {
 		// 채팅 시작 메뉴아이템
 		mntmNewMenuItem.addActionListener(e -> chatFrame.setVisible(true)); // 누를 때마다 실행이 된다.
 	}
-
 }
