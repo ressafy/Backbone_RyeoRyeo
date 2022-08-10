@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\0_SSAFY\2_workspace\Backbone_RyeoRyeo\Class\3_Algol_01\.metadata\.plugins\org.eclipse.jdt.core
-805589113.index
-4239504874.index
