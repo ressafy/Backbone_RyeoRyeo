@@ -23,20 +23,20 @@ public class CompleteBinaryTree {
 		
 	}
 	
-//	public void bfs() {
-//		Queue<Integer> queue = new LinkedList<Integer>();
-//		queue.offer(1); // 루트 노드를 집어넣어야 한다.
-//		
-//		while(!queue.isEmpty()) {
-//			int current = queue.poll();  // 방문대상 정보 꺼내서 
-//			System.out.print(nodes[current]+" ");  // 방문해서 해야할 일 처리
-//			
-//			// 현재 방문 노드의 자식 노드들을 대기열에 넣기
-//			if(current*2 <= lastIndex) queue.offer(current*2);  // 왼쪽 자식
-//			if(current*2+1 <= lastIndex) queue.offer(current*2+1); // 오른쪽 자식
-//		}
-//		System.out.println();
-//	}
+	public void bfs() {
+		Queue<Integer> queue = new LinkedList<Integer>();
+		queue.offer(1); // 루트 노드를 집어넣어야 한다.
+		
+		while(!queue.isEmpty()) {
+			int current = queue.poll();  // 방문대상 정보 꺼내서 
+			System.out.print(nodes[current]+" ");  // 방문해서 해야할 일 처리
+			
+			// 현재 방문 노드의 자식 노드들을 대기열에 넣기
+			if(current*2 <= lastIndex) queue.offer(current*2);  // 왼쪽 자식
+			if(current*2+1 <= lastIndex) queue.offer(current*2+1); // 오른쪽 자식
+		}
+		System.out.println();
+	}
 	
 	public void bfs2() {
 		Queue<Integer> queue = new LinkedList<Integer>();
@@ -72,6 +72,7 @@ public class CompleteBinaryTree {
 		}
 		System.out.println();
 	}
+	
 	
 	public void dfsByPreOrder(int current) {  // 위에 while(!stack.isEmpty()) 돌릴 것
 		System.out.print(nodes[current]+" ");  // 방문해서 해야할 일 처리
