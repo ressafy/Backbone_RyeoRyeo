@@ -1,0 +1,7 @@
+package 상속과다형성.김모씨;
+
+public interface electric {
+	public void wash() {
+		System.out.println("깨끗하게 씻습니다.");
+	}
+}

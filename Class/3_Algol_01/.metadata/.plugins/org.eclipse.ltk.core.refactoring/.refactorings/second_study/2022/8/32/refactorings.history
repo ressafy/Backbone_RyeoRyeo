@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;상속과다형성.김모씨.식기세척기&apos; to &apos;dishWasher&apos;&#x0D;&#x0A;- Original project: &apos;second_study&apos;&#x0D;&#x0A;- Original element: &apos;상속과다형성.김모씨.식기세척기&apos;&#x0D;&#x0A;- Renamed element: &apos;상속과다형성.김모씨.dishWasher&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;식기세척기&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;상속과다형성.김모씨{식기세척기.java[식기세척기" matchStrategy="1" name="dishWasher" qualified="false" references="true" similarDeclarations="false" stamp="1659351029347" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,22 @@
+package 안려환;
+
+import java.util.Scanner;
+
+public class P001_SWEA1289_원재의메모리복구하기 {
+
+	public static void main(String[] args) {
+		char [] arr_1 = new char[51];
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		for(int j = 0;j<n;j++) {
+			String line = sc.nextLine();
+			for(int i = 0; i< line.length();i++) {
+				arr_1[i] = line.charAt(i);
+			}
+		}
+		
+		for(char a: arr_1) {
+			System.out.println(a);
+		}
+	}
+}
