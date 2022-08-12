@@ -1,6 +1,9 @@
-package dto.books;
+package service.book;
 
 import java.util.List;
+
+import dto.books.Book;
+import dto.books.Magazine;
 
 public interface IBookManager {
 	public void add(Book book);
@@ -9,6 +12,7 @@ public interface IBookManager {
 	public Book searchByIsbn(String isbn);
 	public List<Book> searchByTitle(String title);
 	public List<Magazine> getMagazines();
+	
 	public int getTotalPrice();
 	public double getPriceAvg();
 }

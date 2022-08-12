@@ -2,14 +2,16 @@ package server;
 
 import java.net.*;
 
-import dto.Member;
-import dto.Myprotocol;
 import util.ChatException;
+import util.Myprotocol;
 import util.Request;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+
+import dto.member.Member;
+
 import java.io.*;
 
 public class ServerMain {

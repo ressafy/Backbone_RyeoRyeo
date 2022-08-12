@@ -1,8 +1,11 @@
-package dto.books;
+package service.book;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import dto.books.Book;
+import dto.books.Magazine;
 
 public class BookManagerImpl implements IBookManager{
 
@@ -17,7 +20,10 @@ public class BookManagerImpl implements IBookManager{
 	}
 
 	public void add(Book book) {
-		books.add(book);
+		synchronized(books){  // 이 메서드를 써버리면 다른 메서드에 접근하는 
+			books.add(book);
+		}
+		
 	}
 
 	public void remove(String isbn) {
@@ -32,7 +38,7 @@ public class BookManagerImpl implements IBookManager{
 
 	@Override
 	public List<Book> getBooks() {
-		List<Book> dest=null;
+		List<Book> dest= new ArrayList<>();
 		Collections.copy(dest, books);
 		return dest;
 	}

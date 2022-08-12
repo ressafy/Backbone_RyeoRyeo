@@ -8,8 +8,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-import dto.Member;
-import dto.Myprotocol;
+
+import dto.books.Book;
+import dto.member.Member;
+import util.Myprotocol;
 import util.Request;
 
 import javax.swing.JMenuBar;
@@ -23,6 +25,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.List;
 import java.awt.event.ActionEvent;
 
 public class MyFrame extends JFrame {
@@ -43,7 +46,7 @@ public class MyFrame extends JFrame {
 	ObjectOutputStream oos;
 	ObjectInputStream ois;
 	String chatId;
-
+	List<Book> books;
 	/**
 	 * Launch the application.
 	 */
@@ -126,7 +129,13 @@ public class MyFrame extends JFrame {
 					while (true) {
 						try {
 							Myprotocol p = (Myprotocol) ois.readObject();
-							textArea.append(p.getMsg() + "\n");
+							switch (p.getSign()) {
+							case firstRes: books = p.getBooks();
+							textArea.append(books + "\n");
+							break;
+							default:textArea.append(p.getMsg() + "\n");
+							}
+							
 						} catch (Exception ex) {
 							ex.printStackTrace();
 						}

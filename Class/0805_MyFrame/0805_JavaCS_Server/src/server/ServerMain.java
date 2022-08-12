@@ -3,20 +3,24 @@ package server;
 import java.net.*;
 
 import util.ChatException;
+import util.Myprotocol;
 import util.Request;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
-import dto.Member;
-import dto.Myprotocol;
+import dto.books.Book;
+import dto.books.Magazine;
+import dto.member.Member;
 
 import java.io.*;
 
 public class ServerMain {
 	ArrayList<ObjectOutputStream> list = new ArrayList<>();
 	ArrayList<Member> memberlist = new ArrayList<>();
+	ArrayList<Book> books = new ArrayList<>();
 	public synchronized void broadcast(String msg) throws ChatException {
 		for (ObjectOutputStream out : list) {
 			try {
@@ -55,29 +59,37 @@ public class ServerMain {
 			String cmd = sc.next();
 			if("exit".equalsIgnoreCase(cmd)) {   // 앞에 상수를 넣는 것이 좋다. 포인터가 상수라 널포인터 익셉션이 떨어지지 않기 때문이다.
 				//save
-				memberlist.add(new Member("가려환", Integer.MIN_VALUE));  // 여기에 이걸 넣으면 맨 앞으로 오는줄알았는데 맨 뒤로 갔네; 언더플로우 나와서 부호를 빼버리고 아예 다른 수로 인식해버려서 그렇다.
-				memberlist.add(new Member("나려환", 28));
-				memberlist.add(new Member("다려환", 28));
-				memberlist.add(new Member("라려환", 38));
+				List<Book> books = new ArrayList<>();
+				Book b1 = new Book("21424", "py Pro", "김하나", "jaen.kr", "Java 기본문법", 15000);
+				Book b2 = new Book("35355", "Java Pro", "소나무", "jaen.kr", "sw 모델링", 30000);
+				Book b3 = new Book("12345", "Java Pro", "김히비", "jaen.kr", "머신러닝", 50000);
+				Magazine m1 = new Magazine("33333", "Java Pro", "김랄로", "jaen.kr", "딥러닝", 60000, 2013, 7);
+				Magazine m2 = new Magazine("44444", "py Pro", "송아지", "jaen.kr", "러닝", 70000, 2017, 5);
+
+				books.add(b1);
+				books.add(b2);
+				books.add(b3);
+				books.add(m1);
+				books.add(m2);
 				
-				try{FileOutputStream foo = new FileOutputStream("member.dat");
+				try{FileOutputStream foo = new FileOutputStream("book.dat");
 				ObjectOutputStream oos = new ObjectOutputStream(foo);
-				oos.writeObject(memberlist);
+				oos.writeObject(books);
 				oos.flush();
-				System.out.println("Member 파일 생성 완료");
+				System.out.println("Book 파일 생성 완료");
 				}catch(Exception e) {
 					e.printStackTrace();
 				}
 				System.exit(0);
 			}else if("load".equalsIgnoreCase(cmd)) {
-				try{FileInputStream fis = new FileInputStream("member.dat");
+				try{FileInputStream fis = new FileInputStream("book.dat");
 					ObjectInputStream ois = new ObjectInputStream(fis);
-					ArrayList<Member> list = (ArrayList<Member>)ois.readObject();  /// 극도로 중요!!!! 타입 캐스팅!!!! !!! 시험 나와요
+					books = (ArrayList<Book>)ois.readObject();  /// 극도로 중요!!!! 타입 캐스팅!!!! !!! 시험 나와요
 					
 					//비교할 수 있는 방법 1
 					//콜렉션즈는 컴퍼러블 비교이다. 나 자신이다. 나 자신과 비교 !!!!! 꼭 공부하자
-					Collections.sort(list);
-					System.out.println(list);
+					//Collections.sort(list);
+					System.out.println(books);
 					
 					//비교할 수 있는 방법 2 (어레이리스트는 컴퍼레이터를 받아온다.
 //					list.sort((o1,o2)->{  // 이게 컴페어 갖고있다. 인자 2개로 노래방기계처럼 비교
@@ -110,8 +122,9 @@ public class ServerMain {
 		public void run() {
 
 			try {
+				
 				while (true) {
-					Myprotocol p = (Myprotocol) ois.readObject();
+					Myprotocol p = (Myprotocol) ois.readObject();  // 대기상태로 있겠다
 					switch (p.getSign()) {
 					case req:
 						String msg = p.getMsg();
@@ -125,6 +138,10 @@ public class ServerMain {
 					case firstReq: Member m = p.getM();
 						memberlist.add(m);
 						System.out.println(m);
+						
+						p = new Myprotocol(Request.firstRes, books);
+						oos.writeObject(p);  // 첫 연결 시에 book 정보 제공
+						oos.flush();
 						break;
 					default:
 						System.out.println("asdf");

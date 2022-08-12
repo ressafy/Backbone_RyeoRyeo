@@ -1,5 +1,7 @@
 package dto.books;
 
+import service.book.BookManagerImpl;
+
 public class BookTest {
 
 	public static void main(String[] args) {

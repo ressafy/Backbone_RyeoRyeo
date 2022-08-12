@@ -12,8 +12,8 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import dto.Member;
-import dto.Myprotocol;
+import dto.member.Member;
+import util.Myprotocol;
 import util.Request;
 
 import javax.swing.JMenuBar;
