@@ -60,12 +60,11 @@ public class ServerMain {
 			if("exit".equalsIgnoreCase(cmd)) {   // 앞에 상수를 넣는 것이 좋다. 포인터가 상수라 널포인터 익셉션이 떨어지지 않기 때문이다.
 				//save
 				List<Book> books = new ArrayList<>();
-				Book b1 = new Book("21424", "py Pro", "김하나", "jaen.kr", "Java 기본문법", 15000);
-				Book b2 = new Book("35355", "Java Pro", "소나무", "jaen.kr", "sw 모델링", 30000);
-				Book b3 = new Book("12345", "Java Pro", "김히비", "jaen.kr", "머신러닝", 50000);
-				Magazine m1 = new Magazine("33333", "Java Pro", "김랄로", "jaen.kr", "딥러닝", 60000, 2013, 7);
-				Magazine m2 = new Magazine("44444", "py Pro", "송아지", "jaen.kr", "러닝", 70000, 2017, 5);
-
+				Book b1 = new Book("21424", "Java 프로그래밍", "조용준", "가메출판사", "p_book04_thum.png", 15000);
+                Book b2 = new Book("35355", "토비의 스프링 3.1", "이일민", "에이콘", "p_book05_thum.png", 30000);
+                Book b3 = new Book("12345", "HTML5 API 프로그래밍", "조용준", "가메출판사", "p_book05_thum.png", 50000);
+                Magazine m1 = new Magazine("33333", "2인조 우리는 누구나 날 때부터 2인조다", "이석원", "jaen.kr", "e_book01_thum.png", 60000, 2013, 7);
+                Magazine m2 = new Magazine("44444", "안녕, 소중한 사람", "정한경", "북로망스", "e_book02_thum.png", 70000, 2017, 5);
 				books.add(b1);
 				books.add(b2);
 				books.add(b3);

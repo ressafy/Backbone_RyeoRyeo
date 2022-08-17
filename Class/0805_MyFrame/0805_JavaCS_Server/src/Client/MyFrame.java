@@ -102,9 +102,9 @@ public class MyFrame extends JFrame {
 		panel.setBounds(12, 20, 649, 352);
 		contentPane.add(panel);
 		
-		imgLabel1 = new JLabel(new ImageIcon("c:\\temp\\book\\e_book01_thum.png"));
-		imgLabel2 = new JLabel(new ImageIcon("c:\\temp\\book\\e_book02_thum.png"));
-		imgLabel3 = new JLabel(new ImageIcon("c:\\temp\\book\\e_book03_thum.png"));
+		imgLabel1 = new JLabel(new ImageIcon("\\book\\e_book01_thum.png"));
+		imgLabel2 = new JLabel(new ImageIcon("\\book\\e_book02_thum.png"));
+		imgLabel3 = new JLabel(new ImageIcon("\\book\\e_book03_thum.png"));
 		
 		panel.add(imgLabel1);
 		panel.add(imgLabel2);
