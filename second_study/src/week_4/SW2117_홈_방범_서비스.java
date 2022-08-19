@@ -19,7 +19,7 @@ public class SW2117_홈_방범_서비스 {
 				map[i][j] = Integer.parseInt(arr1[j]);
 			}
 		}  // 입력부
-		
+		//  what can I do
 		
 
 	}
