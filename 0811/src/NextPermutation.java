@@ -42,7 +42,7 @@ public class NextPermutation {
 		
 		// 4. i 위치에서부터 맨 뒤까지의 수열을 가장 작은 형태의 오름차순으로 변경
 		int k = N -1;// 암기 포인트
-		while(i<k) swap(numbers, i++, k);  // 스와핑하고 돌아오면 증가 // 암기 포인트
+		while(i<k) swap(numbers, i++, k--);  // 스와핑하고 돌아오면 증가 // 암기 포인트
 		
 		return true;
 		
