@@ -4,7 +4,7 @@ I'll do review on this repository
 
 ## Getting Started
 
-I'm in ssafy 8th! I'll do my best for this my last chance
+I'm in ssafy 8th! I'll do my best for this my last chance.
 
 ## Java basic
 
@@ -14,7 +14,7 @@ We started Java basic check my [notion](https://ryeo.notion.site/Java-basic-7179
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get a development env running!!
 
 Say what the step will be
 
