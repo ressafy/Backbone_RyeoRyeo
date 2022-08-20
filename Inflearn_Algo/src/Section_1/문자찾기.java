@@ -19,7 +19,7 @@ public class 문자찾기 {
 			}
 		}
 		System.out.println(cnt);
-		// 이렇게 찾으면 된다.
+		// 이렇게 찾으면 된다. 찾아보자.
 	}
 
 }
