@@ -44,7 +44,7 @@ public class AdjMatrixTest {
 			int cur = queue.poll();
 			System.out.println((char)(cur+'A'));
 			
-			// 현 정점에 인접점들 큐에 넣어서 차후 탐색하도록 만들기
+			// 현 정점에 인접점들 큐에 넣어서 차후 탐색하도록 만들기 !!
 			for (int i = 0; i < N; i++) {
 				if(!visited[i] && adjMatrix[cur][i] != 0) { // 방문하지 않았으며 인접한 경우
 					visited[i] = true;
