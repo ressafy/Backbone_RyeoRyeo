@@ -61,7 +61,6 @@ public class KruskalTest {
 			edgeList[i] = new Edge(Integer.parseInt(st.nextToken()),
 					Integer.parseInt(st.nextToken()),
 					Integer.parseInt(st.nextToken()));
-			
 		}
 		make();
 		Arrays.sort(edgeList);
