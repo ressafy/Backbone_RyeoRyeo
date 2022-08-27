@@ -6,6 +6,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class 방향_전환 {
+	// 방향 전환이 어렵다....
 	static int[] dr = {-1, 1, 0, 0};
     static int[] dc = {0, 0, 1, -1}; // 상하좌우
     static int   x1, x2, y1, y2;
