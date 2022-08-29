@@ -18,7 +18,7 @@ import java.util.StringTokenizer;
  *     무선 충전에서 범위 내의 거리 계산하기 식을 응용 
  *     D = |XA – XB| + |YA – YB|
  *   
- *  
+ *  알겠읍니다...
  *  211ms
  */
 class House{
