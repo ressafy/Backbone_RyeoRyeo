@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>body tag</title>
+	
+	<style type="text/css">
+	.common { background-color: steelblue; color: white; }
+	#private { background-color: magenta; }
+	</style>
+</head>
+<body>
+	<h3>문단의 제목이 들어간다.</h3>
+	<span class="common">공통부분 1(같은 속성)</span>
+	<span class="common">공통부분 2(같은 속성)</span>
+	<span class="common">공통부분 3(같은 속성)</span>
+	<span class="common">공통부분 4(같은 속성)</span>
+	
+	<p id="private">독립속성(중복 X)</p>
+
+	<!--span.common*4-->
+	<span class="common"></span>
+	<span class="common"></span>
+	<span class="common"></span>
+	<span class="common"></span>
+
+	<!-- span.class*4>{공통부분 $(같은 속성)} -->
+	<span class="class">공통부분 1(같은 속성)</span>
+	<span class="class">공통부분 2(같은 속성)</span>
+	<span class="class">공통부분 3(같은 속성)</span>
+	<span class="class">공통부분 4(같은 속성)</span>
+
+	<!-- table>tr*5>td*5 -->
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<!-- div#divid.class.class2>div+div.class5  #은 id 이다.-->
+	<div id="divid" class="class class2">
+		<div></div>
+		<div class="class5"></div>
+	</div>
+</body>
+</html>
