@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSAFY BOOK CAFE</title>
+</head>
+<body>
+    <a href="">SSAFY BOOK CAFE</a><a href=""> 공지사항</a><br>
+    <a href="">로그인</a><br>
+    <a href="">회원가입</a><br>
+    <a href="">로그아웃</a><br>
+    <a href="">마이페이지</a><br>
+    <a href="">관리자</a><br>
+    <img src="img/noimg.png" alt="cannot load">
+    <img src="img/profile.png" alt="cannot load">
+    <br>
+    <label for="">전국매장펼치기</label><br> <!-- 이후 추가 기능이 들어갈 것 같아 p 가 아닌 label 로 하였읍니다. -->
+    <label for="">전국매장접기</label>
+    <ul> <!--예시와 똑같이 tab이 한 번 들어간모양을 위해 ul 안에 li를 넣어줬읍니다.... -->
+        <li>서울
+            <ul>
+                <li>역삼점</li>
+            </ul>
+            <ul>
+                <li>선릉점</li>
+            </ul>
+        </li>
+        <li>대전
+            <ul>
+                <li>학하점</li>
+            </ul>
+            <ul>
+                <li>봉명점</li>
+            </ul>
+        </li>
+        <li>구미
+            <ul>
+                <li>인동점</li>
+            </ul>
+            <ul>
+                <li>공단점</li>
+            </ul>
+        </li>
+        <li>광주
+            <ul>
+                <li>하남산단점</li>
+            </ul>
+            <ul>
+                <li>광주역점</li>
+            </ul>
+        </li>
+    </ul>
+
+    <label for="">[당신의 선택]</label><br>
+    <label for="">공부하고 싶은 분야를 골라 주세요!!</label><br>
+
+    <ul>
+        <li><input type="radio" name="python" id="python"><img src="img/poll/python.png" alt="">python</li>
+        <li><input type="radio" name="HTML5" id="HTML5"><img src="img/poll/html5.png" alt="">HTML5</li>
+        <li><input type="radio" name="Vue.js" id="Vue.js"><img src="img/poll/vuejs.png" alt="">Vue.js</li>
+        <li><input type="radio" name="Java" id="Java"><img src="img/poll/java.png" alt="">Java</li><br>
+    </ul>
+    <form action="" method="get"><button>투표하기</button> <button>결과보기</button></form>
+    <!-- form 의 button 이 사용자가 원하는 모양으로 변경하기 쉽다고 수업시간에 들어 form 의 버튼을 사용하였읍니다. -->
+    <label for="">투표 기간: 21.03.01 ~ 21.03.31</label>
+    <label for=""><h3>[프로그래밍 언어]</h3></label>
+    <ul>
+        <li><img src="img/book/p_book01.png" alt="" height="280" width="180"><br>Do it 점프 투 파이썬 (18,800원)</li>
+        <li><img src="img/book/p_book02.png" alt="" height = "280" width="180"><br>HTML5 API 프로그래밍(23,000원)</li>
+        <li><img src="img/book/p_book03.png" alt="" height = "280" width="180"><br>백견불여일타 Vue.js입문 (22,200원)</li>
+        <li><img src="img/book/p_book04.png" alt="" height = "280" width="180"><br>Java 프로그래밍 (26,500원)</li>
+    </ul>
+    <label for=""><h3>[에세이]</h3></label>
+    <ul>
+        <li><img src="img/book/e_book01.png" alt="" height="280" width="180"><br>2인조 (14,800원)</li>
+        <li><img src="img/book/e_book02.png" alt="" height = "280" width="180"><br>안녕, 소중한 사람 (15,000원)</li>
+        <li><img src="img/book/e_book03.png" alt="" height = "280" width="180"><br>꽃을 보듯 너를 본다 (10,000원)</li>
+        <li><img src="img/book/e_book04.png" alt="" height = "280" width="180"><br>곰돌이 푸, 행복한 일은 매일 있어 (12,000원)</li>
+    </ul>
+
+    <label for=""><h3>[인기글]</h3></label>
+    <!-- 나중에 혹시 class 를 이용할 일이 있을까봐 넣어두었읍니다. -->
+    <table>
+        <thead>
+        <tr>
+            <th class="">제목</th>
+            <th class="">작성자 </th>
+            <th class="">조회수</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="">자바공부 쉽게하는법!!</td>
+            <td class="">이쎄링</td>
+            <td class="">1756</td>
+        </tr>
+        <tr>
+            <td class="">알고리즘은 자바? 파이썬?</td>
+            <td class="">홍정밍</td>
+            <td class="">998</td>
+        </tr>
+        <tr>
+            <td class="">스프링 정복하기~</td>
+            <td class="">김나켠</td>
+            <td class="">856</td>
+        </tr>
+        </tbody>
+    </table>
+    
+    <label for=""><h3>[최신글]</h3></label>
+    <table>
+        <thead>
+        <tr>
+            <th class="">제목</th>
+            <th class="">작성자 </th>
+            <th class="">조회수</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="">web 관련 질문있어요.</td>
+            <td class="">이주녕</td>
+            <td class="">12</td>
+        </tr>
+        <tr>
+            <td class="">vue.js는 이렇게 공부해보세요.</td>
+            <td class="">조밍기</td>
+            <td class="">998</td>
+        </tr>
+        <tr>
+            <td class="">꽃길만 걸어요</td>
+            <td class="">류해면</td>
+            <td class="">856</td>
+        </tr>
+        </tbody>
+    </table>
+    <ul>
+        <li><a href="">카페소개</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+        <li><a href="">이용약관</a></li>
+        <li><a href="">오시는길</a></li>
+        <li>&copy; SSAFY Corp</li>
+    </ul>
+</body>
+</html>
