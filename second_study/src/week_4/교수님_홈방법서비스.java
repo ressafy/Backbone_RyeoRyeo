@@ -29,7 +29,7 @@ class House{
         this.c=c;
     }
 }
-public class 교수님_홈방법서비스 {
+public class 교수님_홈방법서비스 {  // 파일 이름 잘못 저장함.
 	static int N, M, K;
     static int max;
     static ArrayList<House> house;
