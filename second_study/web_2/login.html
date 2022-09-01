@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: blueviolet;
+        font-family: consolas;
+        font-size: 25pt;
+        text-align: center;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid;
+        margin: 0 auto;
+        background-color: rgb(144, 253, 220);
+      }
+    </style>
+    <script>
+      function checkValue() {
+        // 1. 사용자가 입력한 값(id, password) 알아오기
+        let id = document.querySelector("#userid");
+        let pw = document.querySelector("#userpass");
+        alert(id);
+        alert(pw);
+        //2. 알아온 값을 체크
+        if (id.value == "") {
+          alert("id를 입력해주세요");
+          return;
+        }
+        if (pw.value == "") {
+          alert("password를 입력해주세요");
+          return;
+        }
+        //3. 값이 있으면 서버로 form 을 전송함
+        let form = document.querySelector("#f1"); // form 을 찾고
+        form.submit(); // 서버로 form 을 전송함.
+        // 값이 없으면 경고창 띄우기
+        if (form.value == "") {
+          alert("form 입력해주세요");
+          return;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>login</h1>
+      <!--form 클라이언트가 서버로 정보를 전송할 때 사용하는 태그-->
+      <form id="f1" action="welcome.html">
+        ID: <input type="text" name="id" id="userid" /><br />
+        PW: <input type="password" name="password" id="userpass" /><br /><br />
+        <input type="reset" value="취소" />
+        <input type="button" value="전송" onclick="checkValue()" />
+      </form>
+    </div>
+  </body>
+</html>
