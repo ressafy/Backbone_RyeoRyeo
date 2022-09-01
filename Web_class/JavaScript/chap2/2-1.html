@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript 선언</title>
+    <script>
+      // function helloJS(message){
+      //   alert('hello'+message);
+      //   console.log('hello ${message}');
+      // }
+      // helloJS("javascript");
+      window.onload = function(){   // window.onload 하면 앞에 두고 쓸 수도 있다.
+        document.querySelector('#btn').addEventListener("click",function(){
+          // 여기의 function 은 익명함수이다.
+          alert("btn 눌렀니")
+        })
+      }
+  </script>
+  </head>
+  <body>
+    <button id="btn">에밋에서 id 는 #이다.</button>
+    
+  </body>
+</html>

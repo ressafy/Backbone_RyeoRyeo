@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let obj = {
+      //     myVar : 'foo',
+      //     myFunction: function(){
+      //         let self = this; // obj 를 가리킴
+      //         console.log(this.myVar);
+      //         setTimeout(function(){
+      //             console.log(self.myVar);
+
+      //         }, 1000);
+      //     }
+      // }
+
+      // let obj = {
+      //     myVar : 'foo',
+
+      //     myFunc: function(){
+      //         console.log(this.myVar);
+      //         setTimeout(function(){
+      //             console.log(this);
+      //         }.bind(this), 1000);  // bind 처리를 해줘야 한다.
+      //     }
+      // }
+
+      let obj = {
+        myVar: "foo",
+        myFunc: function () {
+          console.log(this.myVar);
+          setTimeout(() => {
+            console.log(this.myVar);
+          }, 1000);
+        },
+      };
+      obj.myFunction();
+    </script>
+  </body>
+</html>
