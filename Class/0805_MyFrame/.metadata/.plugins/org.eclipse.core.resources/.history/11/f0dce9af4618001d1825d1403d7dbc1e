@@ -1,0 +1,116 @@
+package dto.books;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class BookManagerImpl implements IBookManager {
+
+	public final static int MAX_SIZE=100;
+	private Book[] books;
+	private int size;
+
+	public BookManagerImpl(){
+		this.books = new Book[MAX_SIZE];
+		this.size = 0;
+	}
+
+	public void add(Book book) {
+		this.books[this.size] = book;
+		this.size++;
+	}
+
+	public synchronized void remove(String isbn) {
+		synchronized (books) {
+			for(Book book:books) {
+				if(book.getIsbn().equals(isbn)) {
+					books.remove(book);
+				}
+			}
+		}
+	}
+
+	public List<Book> getList() {
+		List<Book> dest;
+		Collections.copy(dest, books);
+		return dest;
+	}
+
+	public Book searchByIsbn(String isbn) {
+		for(Book book : books) {
+			if(book.getIsbn().equals(isbn)) {
+				return book;
+			}
+		}
+		return null;
+	}
+	
+	@Override
+	public List<Book> searchByTitle(String title) {
+		List<Book> dest = new ArrayList<>();
+		for(Book book : books) {
+			if(book.getTitle().contains(title)) {
+				dest.add(book);
+				
+			}
+		}
+		return dest;
+	}
+
+	public Magazine[] getMagazines() {
+        Magazine[] imsi_magazines=new Magazine[size];
+        int real_magazines_size=0;
+        for(int i=0;i<size;i++) {            
+            if(books[i] instanceof Magazine) {
+                imsi_magazines[real_magazines_size++]=(Magazine)books[i];
+            }
+        }
+        if(real_magazines_size>0) {
+            Magazine[] real_magazines=new Magazine[real_magazines_size];
+            for(int i=0;i<real_magazines_size;i++) {
+                real_magazines[i]=imsi_magazines[i];
+            }
+            return real_magazines;
+        }
+        return null;
+    }
+
+	
+	
+	public Book[] getBooks() {
+		int bookNum = 0;
+		for (int i = 0; i < size; i++) {
+			if (books[i].getClass().getName().equals("com.ssafy.ws.step3.Book")) {
+				bookNum++;
+			}
+		}
+
+		Book[] resBooks = new Book[bookNum];
+		int idx = 0;
+		for (int i = 0; i < size; i++) {
+			if (books[i].getClass().getName().equals("com.ssafy.ws.step3.Book")) {
+				resBooks[idx] = books[i];
+				idx++;
+			}
+		}
+
+		return resBooks;
+	}
+
+	public int getTotalPrice() {
+		int totalPrice = 0;
+		for (int i = 0; i < size; i++) {
+			totalPrice += books[i].getPrice();
+		}
+
+		return totalPrice;
+	}
+
+	public double getPriceAvg() {
+		int tP = getTotalPrice();
+		double avg = (tP*1.0)/size;
+
+		return avg;
+	}
+
+}

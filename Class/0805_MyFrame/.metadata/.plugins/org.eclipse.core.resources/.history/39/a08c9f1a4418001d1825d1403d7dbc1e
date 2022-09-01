@@ -1,0 +1,13 @@
+package dto.books;
+
+public interface IBookManger {
+	public void add(Book book);
+	public void remove(String isbn);
+	public Book[] getList();
+	public Book searchByIsbn(String isbn);
+	public Book[] searchByTitle(String title);
+	public Magazine[] getMagazines();
+	public Book[] getBooks();
+	public int getTotalPrice();
+	public double getPriceAvg();
+}
