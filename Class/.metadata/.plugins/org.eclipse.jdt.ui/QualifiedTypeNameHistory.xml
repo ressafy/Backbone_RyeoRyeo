@@ -26,4 +26,7 @@
 <fullyQualifiedTypeName name="com.ssafy.jes.util.HouseSAXParser"/>
 <fullyQualifiedTypeName name="com.ssafy.jes.dto.HouseInfo"/>
 <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
