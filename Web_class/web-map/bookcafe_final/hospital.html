@@ -109,7 +109,7 @@
       <div id="map" style="width: 100%; height: 500px"></div>
       <script
         type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey= *** 발급받은 API KEY 입력 ***"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2de65148f95fbc1b6928d324d0c9026c"
       ></script>
       <script type="text/javascript">
         var map;
@@ -195,7 +195,8 @@
         }
 
         document.querySelector("#btn-list").addEventListener("click", function () {
-          var serviceKey = " *** 발급받은 API KEY 입력 ***";
+          var serviceKey =
+            "9Xo0vlglWcOBGUDxH8PPbuKnlBwbWU6aO7%2Bk3FV4baF9GXok1yxIEF%2BIwr2%2B%2F%2F4oVLT8bekKU%2Bk9ztkJO0wsBw%3D%3D";
           var pageNo = "1";
           var numOfRows = "30";
           // server에서 넘어온 data
@@ -222,7 +223,7 @@
               }</div>`,
               latlng: new kakao.maps.LatLng(
                 `${item.getElementsByTagName("YPosWgs84")[0].textContent}`,
-                `${item.getElementsByTagName("XPosWgs84")[0].textContent}`,
+                `${item.getElementsByTagName("XPosWgs84")[0].textContent}`
               ),
             });
           }
@@ -255,7 +256,7 @@
             kakao.maps.event.addListener(
               marker,
               "mouseover",
-              makeOverListener(map, marker, infowindow),
+              makeOverListener(map, marker, infowindow)
             );
             kakao.maps.event.addListener(marker, "mouseout", makeOutListener(infowindow));
 
@@ -263,7 +264,7 @@
             kakao.maps.event.addListener(
               marker,
               "click",
-              makeClickListener(map, marker, infowindow),
+              makeClickListener(map, marker, infowindow)
             );
           }
 

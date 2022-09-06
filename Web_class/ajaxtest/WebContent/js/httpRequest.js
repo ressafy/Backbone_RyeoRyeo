@@ -34,7 +34,7 @@ function sendRequest(url, params, callback, method){
 	//alert("method == " + httpMethod + "\turl == " + httpUrl + "\tparam == " + httpParams);
 	httpRequest.open(httpMethod, httpUrl, true);
 	httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	httpRequest.onreadystatechange = callback;
+	httpRequest.onreadystatechange = callback;  //상태가 바뀔 때마다 콜백 호출
 	//alert(httpMethod == 'POST' ? httpParams : null);
 	httpRequest.send(httpMethod == 'POST' ? httpParams : null);
 }

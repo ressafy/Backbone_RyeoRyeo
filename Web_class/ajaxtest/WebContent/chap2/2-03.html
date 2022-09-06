@@ -16,7 +16,7 @@
         sendRequest("2-03currenttime.jsp", null, viewTime, "GET");
       }
 
-      function viewTime() {
+      function viewTime() {  // call back 함수
         if (httpRequest.readyState == 4) {
           if (httpRequest.status == 200) {
             var time = httpRequest.responseText;

@@ -36,10 +36,13 @@
       let btn = document.querySelector("#listBtn");
       btn.addEventListener("click", function () {
         // TODO : 4-03.json 비동기 호출
+    	fetch("4-03.json")
+      		.then((response) => response.json())
+      		.then((data) => makeList(data))
       });
 
       function makeList(data) {
-        // console.log(typeof data);
+        console.log(typeof data);
         document.querySelector("table").setAttribute("style", "display: ;");
         let tbody = document.querySelector("#studentinfo");
         // let students = data.split("\n");

@@ -273,7 +273,9 @@
         let month = monthSel[monthSel.selectedIndex].value;
         let dealYM = year + month;
         let queryParams =
-          encodeURIComponent("serviceKey") + "=" + " *** 발급받은 API KEY 입력 ***"; /*Service Key*/
+          encodeURIComponent("serviceKey") +
+          "=" +
+          "ZU4eMPfURYD30MtlKMK4%2FG71%2B%2B3FIUskgQXUE7Fbe4z1Nq3t7ob4PkLna3bqULuYTLm%2F0o4KSjAvpGc0RO31BQ%3D%3D"; /*Service Key*/
         queryParams +=
           "&" +
           encodeURIComponent("LAWD_CD") +
@@ -320,7 +322,7 @@
 
           let priceTd = document.createElement("td");
           priceTd.appendChild(
-            document.createTextNode(apt.querySelector("거래금액").textContent + "만원"),
+            document.createTextNode(apt.querySelector("거래금액").textContent + "만원")
           );
           priceTd.classList.add("text-end");
           tr.appendChild(priceTd);
