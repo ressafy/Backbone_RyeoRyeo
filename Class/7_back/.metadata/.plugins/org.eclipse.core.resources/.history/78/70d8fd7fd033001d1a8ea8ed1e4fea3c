@@ -1,0 +1,33 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Hello2 {
+
+	public static void main(String[] args) {  
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try (Connection con = DriverManager.getConnection("");
+				Statement stmt = con.createStatement();
+				ResultSet rs = stmt.executeQuery("select * from employees where id = 10077");
+				) {
+			if(rs.next()) {
+				String name = rs.getString("first_name");
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

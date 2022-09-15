@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수업시간</title>
+</head>
+<body>
+	<input>
+	<a href = "hello?empNo=10002">서블릿호출</a>
+</body>
+</html>
