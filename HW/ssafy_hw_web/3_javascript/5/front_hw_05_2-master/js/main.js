@@ -12,7 +12,7 @@ window.onload = function () {
   // 요청 헤더 설정
   xhr.setRequestHeader("Content-Type", "application/json");
   // 요청 동작 설정
-  xhr.onreadystatechange = function () {
+  xhr.onload = function () {
     if (xhr.readyState === xhr.DONE) {
       // 요청 상태가 OK 이면
       if (xhr.status === 200 || xhr.status === 201) {

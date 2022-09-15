@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  let xhttp = new XMLHttpRequest();
+	  xhttp.onload = function() {  // 여기에 넣어줘야 콜백이 되어 순차적 진행 -> 콜백 헬에 빠진다.
+	   	console.log(this.responseText);
+	  //s2
+	  	  xhttp = new XMLHttpRequest();	
+		  xhttp.onload = function() {
+		  	console.log(this.responseText);
+		  //s3
+		      xhttp = new XMLHttpRequest();
+			  xhttp.onload = function() {
+				   	console.log(this.responseText);
+				  }
+				  xhttp.open("GET", "s3");
+				  xhttp.send();
+		 }
+			  xhttp.open("GET", "s2");
+			  xhttp.send();
+	  }
+	  xhttp.open("GET", "s1");
+	  xhttp.send();
+}
+</script>
+<p>index.html
+</body>
+</html>

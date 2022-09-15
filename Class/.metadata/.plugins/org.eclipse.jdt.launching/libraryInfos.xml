@@ -38,6 +38,25 @@
 <entry path="C:\0_SSAFY\1_tool\0_jdk\8version\jre\lib\endorsed"/>
 </endorsedDirs>
 </libraryInfo>
+<libraryInfo home="C:\0_SSAFY\1_tool\0_jdk" version="1.8.0_192">
+<bootpath>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\resources.jar"/>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\rt.jar"/>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\sunrsasign.jar"/>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\jsse.jar"/>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\jce.jar"/>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\charsets.jar"/>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\jfr.jar"/>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\ext"/>
+<entry path="C:\windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\0_SSAFY\1_tool\0_jdk\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
 <libraryInfo home="C:\0.SSAFY\1.tool\0_jdk\jdk8" version="1.8.0_192">
 <bootpath>
 <entry path="C:\0.SSAFY\1.tool\0_jdk\jdk8\jre\lib\resources.jar"/>
