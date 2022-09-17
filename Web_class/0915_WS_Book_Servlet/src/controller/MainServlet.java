@@ -21,7 +21,7 @@ public class MainServlet extends HttpServlet {
     }
     
     private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // service
+        // service start
         response.setContentType("text/html;charset=utf-8");
         String action =  request.getParameter("action");
         if(action.equals("login")) {
