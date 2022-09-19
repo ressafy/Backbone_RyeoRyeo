@@ -3,15 +3,16 @@
 	<section name="ExternalProjectImportWizard">
 		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\0_SSAFY\2_workspace\1_java\Backbone_RyeoRyeo\Web_class\0916_WS_Book_Servlet3"/>
 			<item value=""/>
 			<item value="C:\0_SSAFY\2_workspace\Backbone_RyeoRyeo\HW"/>
 			<item value="C:\0_SSAFY\2_workspace\Backbone_RyeoRyeo\Class"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
-			<item value="C:\Users\ahnrh\OneDrive\바탕 화면\MyHouse.zip"/>
 			<item value=""/>
+			<item value="C:\Users\ahnrh\OneDrive\바탕 화면\MyHouse.zip"/>
 		</list>
 	</section>
 </section>
