@@ -13,18 +13,18 @@
 	
 	  <h2>상품 정보 등록</h2>
 	  <form id="registForm" >
-	  	<input type="hidden" name="action" value="">
+	  	<input type="hidden" name="sign" value="registProduct">
 	    <div class="form-group">
 	      <label for="productCode">고유번호</label>
-	      <input type="text" class="form-control" id="productCode" placeholder="고유번호 입력">
+	      <input type="text" class="form-control" name="productCode" placeholder="고유번호 입력">
 	    </div>
 	    <div class="form-group">
 	      <label for="model">모델명</label>
-	      <input type="text" class="form-control" id="model" placeholder="모델명 입력">
+	      <input type="text" class="form-control" name="model" placeholder="모델명 입력">
 	    </div>
 	    <div class="form-group">
 	      <label for="price">가격</label>
-	      <input type="number" class="form-control" id="price" placeholder="가격 입력" >
+	      <input type="number" class="form-control" name="price" placeholder="가격 입력" >
 	    </div>
 
 	    <button type="submit" class="btn btn-primary" id="regist">등록</button>
