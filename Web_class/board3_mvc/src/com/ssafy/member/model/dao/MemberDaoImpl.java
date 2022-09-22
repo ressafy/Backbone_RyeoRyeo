@@ -11,12 +11,10 @@ import com.ssafy.util.DBUtil;
 public class MemberDaoImpl implements MemberDao {
 	
 	private static MemberDao memberDao = new MemberDaoImpl();
-	
-	private DBUtil dbutil;
-	
+	private DBUtil dbUtil;
 	
 	private MemberDaoImpl() {
-		dbutil= DBUtil.getInstance();
+		dbUtil = DBUtil.getInstance();
 	}
 	
 	public static MemberDao getMemberDao() {
@@ -25,32 +23,49 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public int idCheck(String userId) throws SQLException {
-		int cnt = 100;  // 이거는 0이 가능하다.
+		int cnt = 1;
 		Connection conn = null;
-		PreparedStatement stmt = null;
+		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			conn = dbutil.getConnection();
-			StringBuilder sql = new StringBuilder();
+			conn = dbUtil.getConnection();
+			StringBuilder sql = new StringBuilder();  // sb보다는 String 이 더 좋다고 하신다. 
 			sql.append("select count(user_id) \n");
 			sql.append("from members \n");
 			sql.append("where user_id = ?");
-			stmt = conn.prepareStatement(sql.toString());
-			stmt.setString(1, userId);
-			rs = stmt.executeQuery();
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setString(1, userId);
+			rs = pstmt.executeQuery();
 			rs.next();
-			cnt=rs.getInt(1);
-		}finally {
-			dbutil.close(rs,stmt,conn);
+			cnt = rs.getInt(1);
+		} finally {
+			dbUtil.close(rs, pstmt, conn);
 		}
-		
 		return cnt;
 	}
 
 	@Override
-	public int joinMember(MemberDto memberDto) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+	public void joinMember(MemberDto memberDto) throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = dbUtil.getConnection();
+			
+			StringBuilder sql = new StringBuilder();
+			sql.append("insert into members (user_id, user_name, user_password, email_id, email_domain, join_date) \n");
+			sql.append("values(?,?,?,?,?,now())");
+			pstmt = conn.prepareStatement(sql.toString());
+			int idx = 0;
+			pstmt.setString(++idx, memberDto.getUserId());
+			pstmt.setString(++idx, memberDto.getUserName());
+			pstmt.setString(++idx, memberDto.getUserPwd());
+			pstmt.setString(++idx, memberDto.getEmailId());
+			pstmt.setString(++idx, memberDto.getEmailDomain());
+			pstmt.executeUpdate();
+		}finally {
+			dbUtil.close(pstmt,conn);
+		}
+
 	}
 
 	@Override

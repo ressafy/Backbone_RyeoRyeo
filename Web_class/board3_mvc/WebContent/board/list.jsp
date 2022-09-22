@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/common/header.jsp" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="root" value="${pageContext.request.contextPath}"/>
 <c:if test="${articles == null}">
 	<script type="text/javascript">
 		alert("정상적인 URL 접근이 아닙니.");

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="root" value="${pageContext.request.contextPath}"></c:set>
+<c:set var="root" value="${pageContext.request.contextPath}" ></c:set>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -76,12 +76,12 @@
       crossorigin="anonymous"
     ></script>
     <script>
-    // 회원 가입 페이지 이동하라.
+	  // 회원가입 페이지 이동.    
       document.querySelector("#btn-mv-join").addEventListener("click", function () {
-    	location.href = "${root}/user?act=mvjoin";// act 말고 아무거나 해도 된다.
+    	location.href = "${root}/user?act=mvjoin";
       });
       
-    // 로그인
+	  // 로그인
       document.querySelector("#btn-login").addEventListener("click", function () {
         if (!document.querySelector("#userid").value) {
           alert("아이디 입력!!");

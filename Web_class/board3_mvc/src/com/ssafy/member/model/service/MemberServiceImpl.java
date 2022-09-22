@@ -16,7 +16,7 @@ public class MemberServiceImpl implements MemberService {
 	public static MemberService getMemberService() {
 		return memberService;
 	}
-	
+
 	@Override
 	public int idCheck(String userId) throws Exception {
 		return memberDao.idCheck(userId);
@@ -25,11 +25,12 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public void joinMember(MemberDto memberDto) throws Exception {
 		// TODO Auto-generated method stub
+		memberDao.joinMember(memberDto);
 
 	}
 
 	@Override
-	public MemberDto loginMember(String userId, String passwd) throws Exception {
+	public MemberDto loginMember(String userId, String userPwd) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -55,7 +55,7 @@ public class DBUtil {
 //		}
 //	}
 
-	public void close(AutoCloseable... closeables) {  // 가변 매개변수
+	public void close(AutoCloseable... closeables) {
 		for (AutoCloseable c : closeables) {
 			if (c != null) {
 				try {

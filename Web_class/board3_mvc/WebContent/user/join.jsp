@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="root" value="${pageContext.request.contextPath}"></c:set>
+<c:set var="root" value="${pageContext.request.contextPath}" ></c:set>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -124,7 +124,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      let isUseId = false; // 
+      let isUseId = false;
       document.querySelector("#userid").addEventListener("keyup", function () {
     	 let userid = this.value;
     	 let resultDiv = document.querySelector("#idcheck-result");
@@ -133,8 +133,11 @@
     		 resultDiv.textContent = "아이디는 6자 이상 16자 이하 입니다.";
     		 isUseId = false;
     	 } else {
-			fetch("${root}/user?act=idcheck&userid="+userid).then(response => response.text()).then(data => {
-				if(data == 0) {
+			fetch("${root}/user?act=idcheck&userid=" + userid)
+				.then(response => response.text())
+				.then(data => {
+					console.log(data);
+	    			 if(data == 0) {
 	    			   resultDiv.setAttribute("class", "mb-3 text-primary");
 	    		       resultDiv.textContent = userid + "는 사용할 수 있습니다.";
 	    		       isUseId = true;
@@ -143,12 +146,8 @@
 	      		       resultDiv.textContent = userid + "는 사용할 수 없습니다.";
 	      		       isUseId = false;
 	    			 }
-			});
-			
+				});
     	 }
-    			 
-
-    	 
       });
       
       document.querySelector("#btn-join").addEventListener("click", function () {

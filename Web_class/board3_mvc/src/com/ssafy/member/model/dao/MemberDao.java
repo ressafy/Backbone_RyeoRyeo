@@ -7,7 +7,7 @@ import com.ssafy.member.model.MemberDto;
 public interface MemberDao {
 
 	int idCheck(String userId) throws SQLException;
-	int joinMember(MemberDto memberDto) throws SQLException;
+	void joinMember(MemberDto memberDto) throws SQLException;
 	MemberDto loginMember(String userId, String userPwd) throws SQLException;
 	
 }
