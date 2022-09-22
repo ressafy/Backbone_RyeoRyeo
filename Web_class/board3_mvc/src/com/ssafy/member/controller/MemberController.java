@@ -40,8 +40,9 @@ public class MemberController extends HttpServlet {
 		} else if("join".equals(act)) {
 			path = join(request, response);
 			forward(request, response, path);
-		} else if("mvlogin".equals(act)) {
+		} else if("mvlogin".equals(act)) { 
 			path = "/user/login.jsp";
+			redirect(request,response,path);
 		} else if("".equals(act)) {
 			
 		} else {
@@ -58,7 +59,7 @@ public class MemberController extends HttpServlet {
 		memberDto.setEmailDomain(request.getParameter("emaildomain"));
 		try {
 			memberService.joinMember(memberDto);
-			return "/user/?act=mvlogin";  // 이렇게 redirect 붙이면 redirect 고 아무것도 안붙이면 forward
+			return "/user?act=mvlogin";  // 이렇게 redirect 붙이면 redirect 고 아무것도 안붙이면 forward
 		}catch(Exception e){
 			e.printStackTrace();
 			request.setAttribute("msg", "회원가입 중 에러 발생!!!");

@@ -24,7 +24,7 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public void joinMember(MemberDto memberDto) throws Exception {
-		// TODO Auto-generated method stub
+		// js 에서 validation check 를 했더라도 서버상에서 또 체크를 해야 한다. 클라이언트쪽에선 조작이 가능하기에
 		memberDao.joinMember(memberDto);
 
 	}

@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="0921_WS_Book_SPA" path="/0921_WS_Book_SPA" reloadable="true" source="org.eclipse.jst.jee.server:0921_WS_Book_SPA"/><Context docBase="0921_WS_Book_SPA2" path="/0921_WS_Book_SPA2" reloadable="true" source="org.eclipse.jst.jee.server:0921_WS_Book_SPA2"/><Context docBase="0921_WS_Book_SPA3" path="/0921_WS_Book_SPA3" reloadable="true" source="org.eclipse.jst.jee.server:0921_WS_Book_SPA3"/></Host>
+      <Context docBase="0921_WS_Book_SPA" path="/0921_WS_Book_SPA" reloadable="true" source="org.eclipse.jst.jee.server:0921_WS_Book_SPA"/><Context docBase="0921_WS_Book_SPA2" path="/0921_WS_Book_SPA2" reloadable="true" source="org.eclipse.jst.jee.server:0921_WS_Book_SPA2"/><Context docBase="0921_WS_Book_SPA3" path="/0921_WS_Book_SPA3" reloadable="true" source="org.eclipse.jst.jee.server:0921_WS_Book_SPA3"/><Context docBase="board3_mvc" path="/board3_mvc" reloadable="true" source="org.eclipse.jst.jee.server:board3_mvc"/><Context docBase="0921_WS_async_hw2" path="/0921_WS_async_hw1" reloadable="true" source="org.eclipse.jst.jee.server:0921_WS_async_hw2"/></Host>
     </Engine>
   </Service>
 </Server>
