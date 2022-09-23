@@ -1,6 +1,6 @@
 let cookie_loginId = $.cookie("loginId");
 if(cookie_loginId){
-	document.querySelector("#loginSpan").innerHTML=cookie_loginId+" <button id ='logoutBtn'>logout</button>";
+	document.querySelector("#loginText").innerHTML=cookie_loginId+"logout";
 }
 
 $(document).on("click","#loginBtn",login);
@@ -48,7 +48,7 @@ async function login(){
 	data = JSON.parse(data);
 	if(data.loginId){
 		$.cookie("loginId",data.loginId);
-		document.querySelector("#loginSpan").innerHTML=data.loginId+" <button id = 'logoutBtn'>logout</button>";
+//		document.querySelector("#loginText").innerHTML=data.loginId+" <button id = 'logoutBtn'>logout</button>";
 	}else{
 		alert(data.msg);
 	}
@@ -57,6 +57,7 @@ async function login(){
 async function logout(){
 	let data = JSON.stringify({sign:"logout"});
 	data = await fetch("main",{method:"POST",body:data});
-	$.removeCookie("loginId");
+	$.removeCookie("loginId",null);
+	$.removeCookie()
 	location.reload();
 }
