@@ -22,16 +22,14 @@
 	    </thead>
 	    <tbody>
 			<%-- 노트북 정보 개수만큼 반복 출력 --%>
-			<c:forEach items="${noteList }" var="note">
+			<c:forEach items="${list}" var="note">
 				<tr >
-					<td>${note.noteCode }</td>
-					<td><a href="main?sign=detailNote&noteCode=${note.noteCode }">${note.model }</a></td>
-					<td>${note.price }</td>
-					<td>${note.company }</td>
+					<td>${list.get(0).getNoteCode()}</td>
+					<td><a href="#">${list.get(0).getModel()}</a></td>
+					<td>${list.get(0).getPrice()}</td>
+					<td>${list.get(0).getCompany()}</td>
 				</tr>
-			
 			</c:forEach>
-			
 			
 	    </tbody>
 	  </table>

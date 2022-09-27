@@ -12,8 +12,8 @@
 	<div class="container p-4">
 	
 	  <h2>노트북 정보 등록</h2>
-	  <form id="registForm" action = "main" method = "post">
-	  	<input type="hidden" name="sign" value="registNote">
+	  <form id="registForm">
+	  	<input type="hidden" name="sign" value="registForm">
 	    <div class="form-group">
 	      <label for="noteCode">고유번호</label>
 	      <input type="text" class="form-control" name="noteCode" placeholder="고유번호 입력">

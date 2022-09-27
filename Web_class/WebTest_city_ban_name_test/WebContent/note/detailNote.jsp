@@ -12,20 +12,20 @@
 	<div class="container p-4">
 	
 	  <h2>노트북 상세 정보</h2>
-	  	<a class="btn btn-warning" href="main?sign=updateNoteForm&noteCode=${note.noteCode }">수정</a>
-	  	<a class="btn btn-warning" href="main?sign=delete&noteCode=${note.noteCode }">삭제</a>
+	  	<a class="btn btn-warning" href="#">수정</a>
+	  	<a class="btn btn-danger" href="#">삭제</a>
 	  <table class="table table-striped">
 	      <tr>
-	        <td>고유번호</td><td>${note.noteCode }</td>
+	        <td>고유번호</td><td></td>
 	      </tr>
 	      <tr>
-	        <td>모델명</td><td>${note.model }</td>
+	        <td>모델명</td><td></td>
 	      </tr>
 	      <tr>
-	        <td>가격</td><td>${note.price }</td>
+	        <td>가격</td><td></td>
 	      </tr>
 	      <tr>
-	        <td>제조사</td><td>${note.company }</td>
+	        <td>제조사</td><td></td>
 	      </tr>
 	  </table>
 	

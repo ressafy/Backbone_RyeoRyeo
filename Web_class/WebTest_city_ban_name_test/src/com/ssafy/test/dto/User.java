@@ -4,14 +4,6 @@ public class User {
 	private String id;
 	private String pw;
 	
-	public User() {
-		
-	}
-	
-	public User(String id, String pw) {
-		setId(id);
-		setPw(pw);
-	}
 	public String getId() {
 		return id;
 	}
@@ -25,6 +17,17 @@ public class User {
 		this.pw = pw;
 	}
 	
+	
+	
+	public User(String id, String pw) {
+		super();
+		this.id = id;
+		this.pw = pw;
+	}
+
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", pw=" + pw + "]";

@@ -6,6 +6,17 @@ public class Note {
 	private int price;
 	private String company;
 	
+	
+	public Note() {
+		super();
+	}
+	public Note(String noteCode, String model, int price, String company) {
+		super();
+		this.noteCode = noteCode;
+		this.model = model;
+		this.price = price;
+		this.company = company;
+	}
 	public String getNoteCode() {
 		return noteCode;
 	}
@@ -31,18 +42,6 @@ public class Note {
 		this.company = company;
 	}
 	
-	
-	
-	public Note() {
-		super();
-	}
-	public Note(String noteCode, String model, int price, String company) {
-		super();
-		this.noteCode = noteCode;
-		this.model = model;
-		this.price = price;
-		this.company = company;
-	}
 	@Override
 	public String toString() {
 		return "NoteBook [noteCode=" + noteCode + ", model=" + model + ", price=" + price + ", company=" + company

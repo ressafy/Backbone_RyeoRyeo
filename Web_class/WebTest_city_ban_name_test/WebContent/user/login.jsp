@@ -10,7 +10,7 @@
 	<div class="container p-4">
 	
 	  <h2>로그인</h2>
-	  <form action = "main">
+	  <form id = "login">
 	  	<input type="hidden" name="sign" value="login">
 	    <div class="form-group">
 	      <label for="id">id:</label>
