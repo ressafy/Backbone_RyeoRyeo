@@ -1,0 +1,797 @@
+!SESSION 2022-09-28 15:59:06.387 -----------------------------------------------
+eclipse.buildId=4.9.0.I20180906-0745
+java.version=1.8.0_192
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.wb.core 4 0 2022-09-28 15:59:07.613
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.core [1026]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.lib [1030]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.core.databinding 4 0 2022-09-28 15:59:07.614
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.core.databinding [1027]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.core.databinding.xml 4 0 2022-09-28 15:59:07.615
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.core.databinding.xml [1028]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.databinding
+    -> Bundle-SymbolicName: org.eclipse.wb.core.databinding; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.databinding [1027]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.xml
+    -> Bundle-SymbolicName: org.eclipse.wb.core.xml; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.xml [1032]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.core.java 4 0 2022-09-28 15:59:07.615
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.core.java [1029]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.core.lib 4 0 2022-09-28 15:59:07.616
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.core.lib [1030]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.core.ui 4 0 2022-09-28 15:59:07.619
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.core.ui [1031]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.core.xml 4 0 2022-09-28 15:59:07.624
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.core.xml [1032]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.layout.group 4 0 2022-09-28 15:59:07.629
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.layout.group [1034]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.os.win32 4 0 2022-09-28 15:59:07.631
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.os.win32 [1036]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.rcp 4 0 2022-09-28 15:59:07.634
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.rcp [1037]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swt
+    -> Bundle-SymbolicName: org.eclipse.wb.swt; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swt [1056]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.ui
+    -> Bundle-SymbolicName: org.eclipse.wb.core.ui; bundle-version="1.10.0.202203170939"; singleton:="true"
+       org.eclipse.wb.core.ui [1031]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.rcp.SWT_AWT 4 0 2022-09-28 15:59:07.636
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.rcp.SWT_AWT [1038]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swing
+    -> Bundle-SymbolicName: org.eclipse.wb.swing; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swing [1047]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp [1037]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.rcp.databinding 4 0 2022-09-28 15:59:07.639
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.rcp.databinding [1039]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swt
+    -> Bundle-SymbolicName: org.eclipse.wb.swt; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swt [1056]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp [1037]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.databinding
+    -> Bundle-SymbolicName: org.eclipse.wb.core.databinding; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.databinding [1027]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.rcp.databinding.emf 4 0 2022-09-28 15:59:07.642
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.rcp.databinding.emf [1040]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp [1037]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.databinding
+    -> Bundle-SymbolicName: org.eclipse.wb.core.databinding; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.databinding [1027]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swt
+    -> Bundle-SymbolicName: org.eclipse.wb.swt; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swt [1056]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp.databinding
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp.databinding; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp.databinding [1039]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.rcp.databinding.xwt 4 0 2022-09-28 15:59:07.644
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.rcp.databinding.xwt [1041]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.xwt
+    -> Bundle-SymbolicName: org.eclipse.wb.xwt; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.xwt [1058]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp [1037]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.databinding.xml
+    -> Bundle-SymbolicName: org.eclipse.wb.core.databinding.xml; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.databinding.xml [1028]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swt
+    -> Bundle-SymbolicName: org.eclipse.wb.swt; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swt [1056]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.databinding
+    -> Bundle-SymbolicName: org.eclipse.wb.core.databinding; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.databinding [1027]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp.databinding
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp.databinding; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp.databinding [1039]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.xml
+    -> Bundle-SymbolicName: org.eclipse.wb.core.xml; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.xml [1032]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.rcp.nebula 4 0 2022-09-28 15:59:07.647
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.rcp.nebula [1043]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swt
+    -> Bundle-SymbolicName: org.eclipse.wb.swt; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swt [1056]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp [1037]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.rcp.swing2swt 4 0 2022-09-28 15:59:07.649
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.rcp.swing2swt [1044]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp [1037]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swt
+    -> Bundle-SymbolicName: org.eclipse.wb.swt; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swt [1056]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.swing 4 0 2022-09-28 15:59:07.659
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.swing [1047]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.ui; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.wb.core.ui; bundle-version="1.10.0.202203170939"; singleton:="true"
+       org.eclipse.wb.core.ui [1031]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.swing.FormLayout 4 0 2022-09-28 15:59:07.661
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.swing.FormLayout [1048]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swing
+    -> Bundle-SymbolicName: org.eclipse.wb.swing; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swing [1047]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.swing.MigLayout 4 0 2022-09-28 15:59:07.663
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.swing.MigLayout [1050]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swing
+    -> Bundle-SymbolicName: org.eclipse.wb.swing; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swing [1047]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.swing.databinding 4 0 2022-09-28 15:59:07.664
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.swing.databinding [1052]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swing
+    -> Bundle-SymbolicName: org.eclipse.wb.swing; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swing [1047]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.databinding
+    -> Bundle-SymbolicName: org.eclipse.wb.core.databinding; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.databinding [1027]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.swing.java6 4 0 2022-09-28 15:59:07.666
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.swing.java6 [1054]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.layout.group
+    -> Bundle-SymbolicName: org.eclipse.wb.layout.group; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.layout.group [1034]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swing
+    -> Bundle-SymbolicName: org.eclipse.wb.swing; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swing [1047]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.swing.jsr296 4 0 2022-09-28 15:59:07.668
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.swing.jsr296 [1055]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swing
+    -> Bundle-SymbolicName: org.eclipse.wb.swing; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swing [1047]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.swt 4 0 2022-09-28 15:59:07.669
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.swt [1056]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core [1026]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core.lib [1030]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.wb.xwt 4 0 2022-09-28 15:59:07.672
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wb.xwt [1058]
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.rcp
+    -> Bundle-SymbolicName: org.eclipse.wb.rcp; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.rcp [1037]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+              org.eclipse.wb.core [1026]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+                Unresolved requirement: Require-Bundle: org.eclipse.wb.core.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.wb.core.lib; bundle-version="1.9.1.202203170939"; singleton:="true"
+                     org.eclipse.wb.core.lib [1030]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+    -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.swt
+    -> Bundle-SymbolicName: org.eclipse.wb.swt; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.swt [1056]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.xml
+    -> Bundle-SymbolicName: org.eclipse.wb.core.xml; bundle-version="1.9.1.202203170939"; singleton:="true"
+       org.eclipse.wb.core.xml [1032]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wb.core.java
+    -> Bundle-SymbolicName: org.eclipse.wb.core.java; bundle-version="1.9.2.202203170939"; singleton:="true"
+       org.eclipse.wb.core.java [1029]
+         Unresolved requirement: Require-Bundle: org.eclipse.wb.core
+           -> Bundle-SymbolicName: org.eclipse.wb.core; bundle-version="1.10.1.202203170939"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:447)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1685)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1627)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1558)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-09-28 15:59:42.758
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\multicampus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2022-09-28 15:59:45.651
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.7.v20180504-0806
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:224)
+	at com.google.gson.Gson.fromJson(Gson.java:888)
+	at com.google.gson.Gson.fromJson(Gson.java:853)
+	at com.google.gson.Gson.fromJson(Gson.java:802)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:91)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:66)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:213)
+	... 9 more
