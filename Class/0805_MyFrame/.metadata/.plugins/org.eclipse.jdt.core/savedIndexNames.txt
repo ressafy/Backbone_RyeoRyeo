@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+C:\0_SSAFY\2_workspace\Backbone_RyeoRyeo\Class\0805_MyFrame\.metadata\.plugins\org.eclipse.jdt.core
-2192902901.index
-3475466513.index
-1865797976.index
-2928945159.index
