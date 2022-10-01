@@ -4,7 +4,7 @@ I'll do review on this repository
 
 ## Getting Started
 
-I'm in ssafy 8th! I'll do my best for this my last chance.
+I'm in ssafy 8th! I'll do my best for this my last chance!!!
 
 ## Java basic
 
