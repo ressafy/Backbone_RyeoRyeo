@@ -14,9 +14,7 @@ We started Java basic check my [notion](https://ryeo.notion.site/Java-basic-7179
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running!!
-
-Say what the step will be
+Someday I'll comment about it
 
 ```
 Give the example
