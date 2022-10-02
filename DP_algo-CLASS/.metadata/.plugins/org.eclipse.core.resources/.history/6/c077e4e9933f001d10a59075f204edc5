@@ -1,0 +1,36 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class DP1_Fibo_MemoTest {
+	static long [] calls1, calls2, memo;
+	static long callCnt1, callCnt2;
+	static int N;
+	
+	static long fibo(int n) {
+		callCnt1++;
+		calls1[n]++;
+		
+		if(n<=1) return n;  // 1항이면 1 0항이면 0
+		return fibo(n-1)+fibo(n-2);
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		N = sc.nextInt();
+		
+		calls1 = new long[N+1]; // 각 항을 계산하기 위한
+		calls2 = new long[N+1];
+		memo = new long[N+1];
+		
+		callCnt1 = callCnt2 = 0;
+		Arrays.fill(memo, -1); // memo 배열을 -1 로 초기화
+		
+		// 처음부터 계산이 가능한 값 초기화
+		memo[0] = 0;
+		memo[1] = 1;
+		
+		
+		
+	}
+
+}

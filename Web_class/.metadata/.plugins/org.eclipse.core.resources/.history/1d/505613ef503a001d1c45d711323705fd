@@ -1,0 +1,18 @@
+package test1;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class HelloService {
+
+	public static void main(String[] args) {
+		try {
+			URL url = new URL("http://localhost:8080/context/resource");
+			HttpURLConnection con = (HttpURLConnection) url.openConnection();
+			System.out.println(con);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

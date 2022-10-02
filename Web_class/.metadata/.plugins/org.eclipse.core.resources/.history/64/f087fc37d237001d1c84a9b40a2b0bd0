@@ -1,0 +1,15 @@
+package model;
+
+import java.sql.Connection;
+
+public class MemberDAO {
+	Connection con;
+	private static MemberService instance;
+	public static MemberService getInstance() {
+		if(instance == null) new MemberDAO();
+		return instance;
+	}
+	private MemberDAO() {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	}
+}

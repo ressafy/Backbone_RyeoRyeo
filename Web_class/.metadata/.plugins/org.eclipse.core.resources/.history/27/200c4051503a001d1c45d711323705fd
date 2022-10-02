@@ -1,0 +1,9 @@
+package test1;
+
+public class HelloService {
+
+	public static void main(String[] args) {
+		URL url = new URL("https://docs.oracle.com/javase/8/docs/api/");
+	}
+
+}

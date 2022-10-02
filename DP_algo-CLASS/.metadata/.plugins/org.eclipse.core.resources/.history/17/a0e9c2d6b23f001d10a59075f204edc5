@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class DP2_ChangeMinCoinTest {
+
+	// 1원 4원 6원 단위로 화폐 고정
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int money = sc.nextInt();
+		
+		int [] D = new int[money+1];  // D[i] : i금액을 만드는 최소동전 수
+		
+		System.out.println(D[money]);
+		
+	}
+
+}
