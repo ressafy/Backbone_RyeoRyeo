@@ -3,12 +3,13 @@
 	<section name="ExternalProjectImportWizard">
 		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\0_SSAFY\2_workspace\1_java\Backbone_RyeoRyeo\algo_study"/>
 			<item value=""/>
+			<item value="C:\0_SSAFY\2_workspace\1_java\Backbone_RyeoRyeo\algo_study"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\multicampus\Desktop\test.zip"/>
 			<item value=""/>
 			<item value="C:\Users\ahnrh\Desktop\board3_mvc_0919_live.zip"/>
 			<item value="C:\Users\ahnrh\Desktop\board3_mvc_배포.zip"/>
