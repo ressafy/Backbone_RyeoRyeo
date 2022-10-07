@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean class="member.controller.LoginCommand" id="login" />
+	<bean class="member.controller.LogoutCommand" id="logout" />
+	<bean class="house.controller.GetGugunCommand" id="getGugun" />
+	<bean class="house.controller.GetDongCommand" id="getDong" />
+	<bean class="house.controller.GetHouseDealInfoCommand" id="getHouseDealInfo" />
+</beans>
