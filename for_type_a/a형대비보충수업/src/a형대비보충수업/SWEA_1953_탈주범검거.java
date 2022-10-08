@@ -90,7 +90,7 @@ public class SWEA_1953_탈주범검거 {
     }
 
     private static int[][] next(int tunnel) {   // 터널 구조물 타입
-        switch (tunnel) {
+        switch (tunnel) {  // 터널의 모양별로...
             case 1:
                 return new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
             case 2:
