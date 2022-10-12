@@ -1,0 +1,26 @@
+package member.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.JsonObject;
+
+import controller.Command;
+
+public class LoginCommand implements Command {
+	 @Override
+	public void service(HttpServletRequest request, HttpServletResponse response, JsonObject json, JsonObject reJson)
+			throws ServletException, IOException {
+		 String id = json.get("id").getAsString();
+		 String pw = json.get("pw").getAsString();
+		 
+		 System.out.println(id + ": " + "pw");
+		 
+		 // 로그인 처리
+		 
+		 reJson.addProperty("msg", "안녕하세여");
+	}
+}

@@ -1,0 +1,15 @@
+$(document).on("click","#loginBtn",login);
+
+async function login(){
+	let id = $("#id").val(); // documnet.querySelector 이다.
+	let id = $("#pw").val();
+	let data = JSON.stringify({sign:"login",id,pw});
+	
+	
+	data = await fetch("main",{method:"POST",body:data});
+	console.log(data);
+	data = await data.text();
+	console.log(data);
+	data = JSON.parse(data);
+	console.log(data);
+}

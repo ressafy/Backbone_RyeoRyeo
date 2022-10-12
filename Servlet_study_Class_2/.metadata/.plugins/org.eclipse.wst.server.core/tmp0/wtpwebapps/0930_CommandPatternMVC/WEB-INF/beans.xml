@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean class = "member.controller.LoginCommand" id = "login" />  <!-- id 가 sign 값과 똑같아야 함 -->
+</beans>
+
+
+<!-- xml 은 경로에 한글이 있어선 안된다. -->

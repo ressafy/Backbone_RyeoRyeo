@@ -12,8 +12,10 @@ $(document).on("change","#gugun",getDong);
 $(document).on("change","#dong",selectedDong);
 $(document).on("click","#list-btn",getHouseDealInfo);
 $(document).on("change","#year",selectYear);
-$(document).on("change","#month",selectMonth)
+$(document).on("change","#month",selectMonth);
 $(document).on("click","#houseDealInfoBtn",getHouseDealInfo);
+
+
 
 
 let month;
@@ -147,6 +149,9 @@ async function getDong() {
 async function logout(id){
 	let data =JSON.stringify({sign:"logout"});
 	await fetch("main",{method:"POST",body:data});
+	$.removeCookie("logined");
+	location.reload();
+	
 }
 
 
@@ -177,3 +182,7 @@ async function login(id){	// 버튼 이벤트 핸들러: 이벤트객체를 갖�
 	}
 	
 }
+
+
+
+

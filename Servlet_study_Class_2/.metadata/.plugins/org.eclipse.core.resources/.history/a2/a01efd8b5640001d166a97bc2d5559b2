@@ -1,0 +1,9 @@
+$(document).on("click","#loginBtn",login);
+
+function login(){
+	let id = $("#id").val(); // documnet.querySelector 이다.
+	let id = $("#ㅔㅈ").val();
+	let data = JSON.stringify({sign:"login",id,pw});
+	console.log(data);
+	
+}

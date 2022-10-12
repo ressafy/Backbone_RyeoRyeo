@@ -25,7 +25,7 @@ public class DispatcherServlet extends HttpServlet {
 			XmlBeanFactory factory = new XmlBeanFactory(path);
 			beans = factory.getBeans();
 			//System.out.println(beans);
-			System.out.println("init수행");
+			System.out.println("init");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,7 +49,7 @@ public class DispatcherServlet extends HttpServlet {
 					json, 
 					reJson);
 		}else {
-			reJson.addProperty("msg","해킹모니터링");
+			reJson.addProperty("msg","머지 이거");
 		}
 		out.append(reJson.toString());
 	}
