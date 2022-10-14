@@ -1,13 +1,12 @@
-package a형대비보충수업;
+package 수업과제;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
-
-public class SWEA_1953_탈주범검거 {
+public class 탈주범검거 {
+	
 	private static class Pos{
 		int r,c,time;
 
@@ -89,7 +88,6 @@ public class SWEA_1953_탈주범검거 {
 		System.out.println(sb);
 		
 	}
-
-    
+	
 
 }
