@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class 탈주범검거_다시 {
+	
 	private static class Pos{
 		int R,C,time;
 
@@ -38,9 +39,8 @@ public class 탈주범검거_다시 {
 			
 			int answer = 0;
 			Pos po = new Pos(R,C,1);
-			Queue<Integer> list = new LinkedList<>();
+			Queue<Pos> list = new LinkedList<>();
 			list.add(po);
-			visited[][]
 		}
 	}
 
