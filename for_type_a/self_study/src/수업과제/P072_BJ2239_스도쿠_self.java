@@ -44,9 +44,10 @@ public class P072_BJ2239_스도쿠_self {
 		for (int i = 0; i < 10; i++) {
 			if(check(p.x,p.y,i)) {
 				map[p.y][p.x] = i;
-				
+				return true;
 			}
 		}
+		return false;
 		
 	}
 	
