@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	<bean class = "member.controller.LoginController" id = "loginController"></bean>
+	<bean class = "member.controller.LogoutController" id = "logoutController"></bean>
+	<bean class = "member.controller.MemberInsertController" id = "memberInsertController"></bean>
+	<bean class = "house.controller.HouseDealSearchController" id = "houseDealSearchController"></bean>
+	<bean id="urlMapping" 
+  class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+  	<property name="mappings">  <!-- name 이 set에서드가 된다고 한다. -->
+  		<props>
+  			<prop key="/member/login.do">loginController</prop> <!-- xxx.do 컨트롤러한테 가라 -->
+  			<prop key="/member/logout.do">logoutController</prop> <!-- 검정글씨는 id가 와야 한다. xml 에서 유일하게 찾아지는 이름 - id 위의 id 와 완전히 일치해야 함 -->
+  			<prop key="/member/memberInsert.do">memberInsertController</prop>
+  			<prop key="/house/houseDealSearch.do">houseDealSearchController</prop> <!-- 이거 미리 다 쓰지 말고 구현할 때마다 하자. 하나라도 구현 안돼있으면 작동 안된다. -->
+  		</props>
+  	</property>
+  </bean>
+	
+
+</beans>

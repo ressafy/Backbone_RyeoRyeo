@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/cglib-nodep-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/com.springsource.javax.validation-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-digester-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-pool.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/commons-pool-1.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/mybatis-3.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/mybatis-spring-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.aop-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.asm-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.aspects-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.beans-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.context-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.core-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.expression-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.jdbc-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.transaction-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.web.servlet-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/org.springframework.web-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/slf4j-jdk14-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/spring.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/standard.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/tiles-api-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/tiles-core-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/tiles-jsp-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/tiles-servlet-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/0_SSAFY/3_lib/spring/tiles-template-2.2.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
