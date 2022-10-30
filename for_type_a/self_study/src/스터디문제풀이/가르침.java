@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class 가르침 {  // 95퍼까지 올라왔읍니다....
+	// 가르침을 받아 가르침을 해결...
 	private static int N,K;
 	private static String [] words;
 	private static boolean [] visited = new boolean[26];
