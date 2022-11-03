@@ -36,47 +36,7 @@ public class 배열돌리기4 {
 				map[i][j] = Integer.parseInt(arr[j]);
 			}
 		}
-		for (int i = 0; i < K; i++) {
-			arr = br.readLine().split(" ");
-			R =Integer.parseInt(arr[0])-1;
-			C = Integer.parseInt(arr[1])-1;
-			S = Integer.parseInt(arr[2]);
-//			int x = (R+S) - (R-S);  // 그 줄의 첫 연산 횟수
-//			int y = (C+S) - (C-S);
-			po = new Pos(R-S,C-S,0,map[C-S][R-S]);
-			move();
-		}
 	}
 	
-	private static void move() {
-		while(true) {
-			if(po.dir == 3 && po.i - 1 < 0) {  // 바깥 껍데기
-				if(visited[po.i+1][po.j+1] == true) {
-					break;
-				}
-			}  // 껍데기면서 대각선 안에 방문했으면 다 돈 것
-			if(po.dir == 3 && visited[po.i-1][po.j] == true && visited[po.i+1][po.j+1] == true) {
-				break;
-			}  // 맨 안쪽까지 다 돌았다면
-			
-			//그게 아니라면
-			switch(po.dir) {
-			case 0:
-				if(po.j+1<M && visited[po.i][po.j+1] == false) {
-					visited[po.i][po.j+1] = true;
-					int temp = po.temp;
-					po = new Pos(po.i,po.j+1,0,map[po.i][po.j+1]);
-					map[po.i][po.j+1] = temp;
-					break;
-				}else {
-					po = new Pos(po.i+1,po.j,1,map[po.i][po.j+1]);
-					break;
-				}
-			case 1:
-				
-			}
-			
-		}
-	}
-
+	
 }
