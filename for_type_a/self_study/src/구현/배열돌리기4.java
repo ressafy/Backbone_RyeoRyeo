@@ -9,7 +9,7 @@ public class 배열돌리기4 {
 	private static int R,C,S,N,M,K;
 	private static Pos po;
 	
-	private static class Pos{  //ㄷ 다시 ㅜㅍㄹ기
+	private static class Pos{  // for 문만을 이용해서 다시 풀기
 		int i,j,dir,temp;
 
 		public Pos(int i, int j, int dir, int temp) {
