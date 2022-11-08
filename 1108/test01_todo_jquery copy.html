@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <h1>TODO APP</h1>
+  <input type="text" id = "insertTODO"><br>
+  <div id ="app"></div>
+  
+  <style>
+    .donestyle{
+      text-decoration: line-through;
+      color:lightgray;
+    }
+
+  </style>
+  
+
+
+  <script>
+    const todos = [
+      {done:false, text:"빵사기"},
+      {done:false, text:"커피사기"},
+      {done:false, text:"공부하기"}];
+    var total = todos.length;
+    var checked_num = 0;
+
+    let todoDiv = '';
+    let totalDiv = '';
+
+
+
+    todos.forEach(function(item,index){
+      todoDiv += `<input type="checkbox" onchange = "f(${index},this,checked_num)"><span id = "${index}">${item.text}</span><br>`;  // 이건 엘리먼트가 아니고 텍스트이다. 
+      // 문서객체 밑 html 밑의 영역에 못들어간다.
+    });
+    totalDiv += `<div id = "countcheck">${checked_num}/${total}개 완료됨</div>`;
+    $("#app").html(todoDiv+totalDiv); // 라는 함수를 써서 안에 텍스트를 넣어주는 것이다.  이 기능은 createElement 해주는 것이다.
+    function f(index,checkboxObj,checked_num){
+      console.log(index,checkboxObj,$(checkboxObj).is(":checked"));
+      // jquery의 함수에 이렇게 객체를 넣어줄 수 있다.
+      // $(document).ready 이러면 특정 객체를 인식하게 되는 것이다.
+      // $(checkboxObj).is(":checked") 는 체크박스의 상태를 알려준다.
+      if($(checkboxObj).is(":checked")){
+        this.checked_num ++;
+       $(`#${index}`).attr("class","donestyle");  // 동적으로 어트리뷰트 추가
+        console.log( $(checkboxObj).attr("class")); // 이럼 어떤 class 어트리뷰트가 적용되어 있나 확인이 가능하다.
+        // 이러면 this에만 들어가서 안되는 거였다...
+        todos[index].done = true;
+        console.log(todos[index]);
+        console.log("checked_num은 뭐냐면 "+this.checked_num);
+        total = todos.length;
+      }else{
+        this.checked_num --;
+        $(`#${index}`).attr("class","");
+        todos[index].done = false;
+        total = todos.length;
+      }
+      $("#countcheck").html(`${this.checked_num}/${total}개 완료됨`);
+    }
+
+    $("#insertTODO").keypress(function(e) {
+      if (e.keyCode === 13) {
+        todos.push({done:false, text:insertTODO.value});
+        todoDiv = "";
+
+        total = todos.length;
+        todos.forEach(function(item,index){
+          if(item.done==true)
+            todoDiv += `<input type="checkbox" onchange = "f(${index},this,checked_num)" checked><span id = "${index}" class="donestyle">${item.text}</span><br>`;  // 이건 엘리먼트가 아니고 텍스트이다. 
+          else{
+            todoDiv += `<input type="checkbox" onchange = "f(${index},this,checked_num)"><span id = "${index}">${item.text}</span><br>`
+          }
+          //문서객체 밑 html 밑의 영역에 못들어간다.
+
+        });
+
+        $("#app").html(todoDiv+totalDiv);
+        $("#countcheck").html(`${checked_num}/${total}개 완료됨`);
+      }
+    });
+  </script>
+</body>
+</html>

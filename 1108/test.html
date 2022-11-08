@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id = "app">
+    <h1>vue todo app</h1>
+    <input type="text" placeholder="할일을 입력하고 엔터누르세여" @keyup.enter = "addTodo" v-model="job"/>
+    <div v-for="(item, index) in todos" :key="index">
+      <input type="checkbox" v-model="item.done"><span v-bind:class="{donestyle:item.done}">{{item.text}}</span>
+    </div>
+    <p>{{remaining}}/{{todos.length}} 처리 완료</p>
+    <input type="button" @click="clearTodo" value="처리 완료항목 삭제">
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        job:"",
+        todos:[ 
+          {done:false, text:"사과사오기"},
+          {done:false, text:" 배사오기"},
+          {done:false, text:"딸기사오기"},
+        ]
+      },
+      computed:{
+        remaining(){
+          return this.todos.filter(function(item){
+            return item.done;
+          }).length;
+        }
+      },
+      methods: {
+        addTodo(){
+          this.todos.push({done:false, text:this.job});
+          this.job = "";
+        },
+        clearTodo(){
+          this.todos = this.todos.filter(function(item){
+            return item.done == false;
+          })
+        }
+      },
+    });
+
+  </script>
+  <style>
+    .donestyle{
+      text-decoration: line-through;
+      color:darkgray;
+    }
+
+  </style>
+</body>
+</html>
