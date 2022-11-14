@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+  
+</head>
+<body>
+  <div id = "app">
+    <h1>TODO APP VUE</h1>
+    <input placeholder="할 일을 입력하고 enter치세여" @keyup.enter = "addTodo" v-model="job"><!---->
+    <div v-for="(item,index) in todos" :key="index">
+      <input type="checkbox" v-model="item.done"/>
+      <span :class = "{donestyle:item.done}">{{item.text}}</span>  <!--내 item의 done 에 따라서 주거나 안주거나 하겠다.-->
+    </div>
+    <p> {{remaining}}/{{todos.length}} 건 처리</p>
+    <button @click="cleanTodo">처리완료삭제</button>
+  </div>
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        job:"",
+        todos:[
+          {done:false, text : "빵사기"},
+          {done:false, text : "커피사기"},
+          {done:false, text: "공부하기"},
+        ],
+      },
+      computed:{
+        remaining(){
+          console.log("감지됨");
+          // 여기서 리턴하고 싶은 것이고 필터를 처리하고 싶은 것이다.
+					return this.todos.filter(function(item){
+            return item.done;
+          }).length;
+          
+         // return 0;
+        },
+      },
+      methods: {
+        addTodo(){  // property 의 이름 : 값  -> 객체의 리터럴
+          console.log("addTodo() 호출됨", this.job);
+          this.todos.push({done:false, text: this.job});
+          this.job = "";
+        },
+        cleanTodo(){
+          console.log("버튼 눌리니?");
+          this.todos = this.todos.filter(function(item){
+            return item.done == false;
+          });
+
+        }
+        // a(){   // a:function(){ 이 형태 귀찮으니 a(){} 하면 됨
+
+        // },
+      },
+    });
+  </script>
+  <style>
+    .donestyle {
+      text-decoration : line-through;
+      color: lightgray;
+    }
+  </style>
+</body>
+</html>

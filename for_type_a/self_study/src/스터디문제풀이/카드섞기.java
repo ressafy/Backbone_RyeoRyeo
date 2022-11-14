@@ -132,8 +132,9 @@ public class 카드섞기 {
 		}
 		
 		for (int i = 0; i < N; i++) {
-			finish[i] = p[i];
+			finish[i] = p[i];  // 초기 상태 설정
 		}
+		
 		
 		// 그럼 가능한 애들에 한해서 shuffle() 메소드가 돌아갈 것이다.
 		shuffle();

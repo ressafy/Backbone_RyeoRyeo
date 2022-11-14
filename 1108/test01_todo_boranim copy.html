@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1>TODO APP</h1>
+
+    <input type = "text", id = "newtodo" onkeyup="enterkey()">
+    <div id="app"></div>
+    <div id ="result"></div>
+    
+    <style>
+      .donestyle {
+        text-decoration : line-through;
+        color: lightgray;
+      }
+    </style>
+    <script>
+      if(sessionStorage.getItem("todos")==null){
+        var t = [
+          {done:false, text : "빵사기"},
+          {done:false, text : "커피사기"},
+          {done:false, text: "공부하기"},
+        ];
+        console.log(JSON.stringify(t));
+        sessionStorage.setItem("todos",JSON.stringify(t));
+      }
+      let cnt = 0;
+      var todos =  JSON.parse(sessionStorage.getItem("todos"));
+
+
+      let todoDiv = "";
+        todos.forEach(function (item, index){
+          console.log('print',item.done==false);
+          if(item.done==true){
+            todoDiv+=`<input type="checkbox" checked onchange= "f(${index},this)"><span id = "${index}" class="donestyle">${item.text}</span><br/>`;
+            cnt++;
+          }else{
+            todoDiv+=`<input type="checkbox" onchange= "f(${index},this)"><span id = "${index}">${item.text}</span><br/>`;
+          }
+        });
+        $("#app").html(todoDiv);
+        $("#result").html(`${cnt} / ${todos.length} 완료`);
+
+      function mktodo(){
+        let todoDiv = "";
+        todos.forEach(function (item, index){
+          console.log('print',item.done==false);
+          if(item.done==true){
+            todoDiv+=`<input type="checkbox" checked onchange= "f(${index},this)"><span id = "${index}" class="donestyle">${item.text}</span><br/>`;
+          }else{
+            todoDiv+=`<input type="checkbox" onchange= "f(${index},this)"><span id = "${index}">${item.text}</span><br/>`;
+          }
+        });
+        $("#app").html(todoDiv);
+        $("#result").html(`${cnt} / ${todos.length} 완료`);
+      }
+      
+      function enterkey(){
+        if(window.event.keyCode==13){
+          const tmp = $("#newtodo").val();
+          todos.push({done:false, text : tmp});
+          sessionStorage.setItem("todos",JSON.stringify(todos));
+          mktodo();
+        }
+        
+      }
+      
+      function f(index, checkboxObj){
+        console.log(index, $(checkboxObj).is(":checked"));
+        if($(checkboxObj).is(":checked")){
+          $(`#${index}`).attr("class", "donestyle");
+          todos[index].done = true;
+          console.log(todos[index]);
+          cnt=cnt+1;
+        }else{
+          $(`#${index}`).attr("class","");
+          todos[index].done = false;
+          cnt-=1;
+        }
+        $("#result").html(`${cnt} / ${todos.length} 완료`);
+        sessionStorage.setItem("todos",JSON.stringify(todos));
+        console.log(cnt);
+      }
+
+    </script>
+  </body>
+</html>
