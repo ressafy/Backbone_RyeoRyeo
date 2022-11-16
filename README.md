@@ -82,3 +82,84 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Inspiration
 * etc
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow">순번</th>
+    <th class="tg-c3ow">요구사항명</th>
+    <th class="tg-c3ow">요구사항 상세</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow" colspan="3">기능적 요구사항</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F01</td>
+    <td class="tg-c3ow">따릉이 대여소 정보 수집</td>
+    <td class="tg-c3ow">공공데이터 포털: 따릉이 데이터 가공 후 DB저장</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F02</td>
+    <td class="tg-c3ow">공원 정보 수집</td>
+    <td class="tg-c3ow">공공데이터 포털: 
+서울시 주요 공원현황 데이터 가공 후 DB저장</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F03</td>
+    <td class="tg-c3ow">맛집 정보 수집</td>
+    <td class="tg-c3ow">공공데이터 포털: 서울시 관광 맛집 데이터 가공 후 DB저장</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F04</td>
+    <td class="tg-c3ow">관광 명소 정보 수집</td>
+    <td class="tg-c3ow">공공데이터 포털: 서울시 관광 명소 데이터 가공 후 DB저장</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F05</td>
+    <td class="tg-c3ow">대여소 검색</td>
+    <td class="tg-c3ow">구/동별 따릉이 대여소 검색 결과 데이터 제공</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F06</td>
+    <td class="tg-c3ow">관심 지역 상세</td>
+    <td class="tg-c3ow">지도에 표시된 마커로 관련 정보 조회 및 관심지역 추가기능</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F07</td>
+    <td class="tg-c3ow">게시판 글 추가/수정/삭제</td>
+    <td class="tg-c3ow">게시판 글쓰기 및 수정, 삭제와 첨부파일 업로드</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F08</td>
+    <td class="tg-c3ow">게시판 글 좋아요 기능</td>
+    <td class="tg-c3ow">회원의 게시글 좋아요 DB 적용</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">F09</td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" colspan="3">비기능적 요구사항</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">NF01</td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+  </tr>
+</tbody>
+</table>
